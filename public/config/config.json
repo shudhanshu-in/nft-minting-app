@@ -2,9 +2,9 @@
   "CONTRACT_ADDRESS": "0x87792F399f59D0DBCEDa09F25284edC82f408153",
   "SCAN_LINK": "https://polygonscan.com/address/0x87792F399f59D0DBCEDa09F25284edC82f408153",
   "NETWORK": {
-    "NAME": "Matic (Mumbai)",
-    "SYMBOL": "Test Matic",
-    "ID": 80001
+    "NAME": "Matic",
+    "SYMBOL": "MATIC",
+    "ID": 137
   },
   "NFT_NAME": "VeeFriends",
   "SYMBOL": "VEE",
