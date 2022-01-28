@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x07e2EDAC117eDd93f6c5093B473e6A30513c3311",
-  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0x07e2EDAC117eDd93f6c5093B473e6A30513c3311",
+  "CONTRACT_ADDRESS": "0x87792F399f59D0DBCEDa09F25284edC82f408153",
+  "SCAN_LINK": "https://polygonscan.com/address/0x87792F399f59D0DBCEDa09F25284edC82f408153",
   "NETWORK": {
-    "NAME": "Polygon Testnet",
+    "NAME": "Polygon",
     "SYMBOL": "MATIC",
-    "ID": 80001
+    "ID": 137
   },
   "NFT_NAME": "VeeFriends",
   "SYMBOL": "VEE",
