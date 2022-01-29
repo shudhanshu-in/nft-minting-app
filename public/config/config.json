@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x87792F399f59D0DBCEDa09F25284edC82f408153",
-  "SCAN_LINK": "https://polygonscan.com/address/0x87792F399f59D0DBCEDa09F25284edC82f408153",
+  "CONTRACT_ADDRESS": "0x001fd0C15a39D460e4211c71cF890Aaeb6f67afF",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x001fd0C15a39D460e4211c71cF890Aaeb6f67afF#code",
   "NETWORK": {
-    "NAME": "Polygon",
-    "SYMBOL": "MATIC",
-    "ID": 137
+    "NAME": "RINKEBY ETH",
+    "SYMBOL": "ETH",
+    "ID": 4
   },
   "NFT_NAME": "VeeFriends",
   "SYMBOL": "VEE",
