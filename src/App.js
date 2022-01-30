@@ -230,7 +230,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              
+              1100/5000
             </s.TextTitle>
             <s.TextDescription
               style={{
