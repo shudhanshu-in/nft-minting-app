@@ -189,7 +189,7 @@ function App() {
    const updateTimestamp = () => {
     setTimeout(() => {
       setDefaultCount(parseInt(defaultCount) + 1);
-    }, 5000) 
+    }, 200000) 
   }
 
   useEffect(() => {
@@ -242,7 +242,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              1100/5000
+              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -261,7 +261,7 @@ function App() {
               
             </span>
             <s.SpacerSmall />
-             {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+             
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
                 <s.TextTitle
