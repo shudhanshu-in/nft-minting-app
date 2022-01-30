@@ -21,34 +21,6 @@ const fetchDataFailed = (payload) => {
   };
 };
 
-export const fetchDataTimer = (payload) => {
-  return {
-    type: "FETCH_DATA_TIMER",
-    payload: payload,
-  };
-};
-
-export const CountApiCall = () => {
-  return (dispatch) => {
-    fetch("https://nftstripe.herokuapp.com/api/getStripeCount")
-    .then(response => response.json())
-    .then(data => {
-      let [respData] = data
-      dispatch(fetchDataTimer({time:respData.count}))
-      CountUpdateApi(parseInt(respData.count) + 1)
-    });
-  }
-}
-
-
-export const CountUpdateApi = (count) => {
-  fetch(`https://nftstripe.herokuapp.com/api/updateCount?id=61f6a51a7563d155b38ba1c1&count=${count}`)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-  });
-}
-
 export const fetchData = () => {
   return async (dispatch) => {
     dispatch(fetchDataRequest());
