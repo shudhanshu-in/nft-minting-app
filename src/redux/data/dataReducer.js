@@ -1,7 +1,6 @@
 const initialState = {
   loading: false,
   totalSupply: 0,
-  totalCountDone: 0,
   cost: 0,
   error: false,
   errorMsg: "",
@@ -32,13 +31,6 @@ const dataReducer = (state = initialState, action) => {
         error: true,
         errorMsg: action.payload,
       };
-     case "FETCH_DATA_TIMER":
-       return{
-        ...state,
-        totalCountDone: action.payload.time,
-        error: false,
-        errorMsg: "",
-    }
     default:
       return state;
   }
