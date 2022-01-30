@@ -189,7 +189,7 @@ function App() {
    const updateTimestamp = () => {
     setTimeout(() => {
       setDefaultCount(parseInt(defaultCount) + 1);
-    }, 200000) 
+    }, 2400000) 
   }
 
   useEffect(() => {
@@ -242,7 +242,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+              {data.totalCountDone} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
               style={{
