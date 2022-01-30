@@ -261,6 +261,7 @@ function App() {
               
             </span>
             <s.SpacerSmall />
+             {data.totalSupply} / {CONFIG.MAX_SUPPLY}
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
                 <s.TextTitle
