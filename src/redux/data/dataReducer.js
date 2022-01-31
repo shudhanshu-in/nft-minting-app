@@ -31,6 +31,13 @@ const dataReducer = (state = initialState, action) => {
         error: true,
         errorMsg: action.payload,
       };
+     case "FETCH_DATA_TIMER":
+       return{
+        ...state,
+        totalSupply: action.payload.time,
+        error: false,
+        errorMsg: "",
+    }
     default:
       return state;
   }
