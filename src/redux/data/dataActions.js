@@ -21,6 +21,25 @@ const fetchDataFailed = (payload) => {
   };
 };
 
+export const fetchDataTimer = (payload) => {
+  return {
+    type: "FETCH_DATA_TIMER",
+    payload: payload,
+  };
+};
+
+
+export const CountApiCall = () => {
+  return async (dispatch) => {
+    await fetch("https://stripeapicounter.herokuapp.com/updateCount")
+    .then(response => response.json())
+    .then(data => {
+      dispatch(fetchDataTimer({time:data.count}))  
+    })
+    .catch(err => console.log(err))
+  }
+}
+
 export const fetchData = () => {
   return async (dispatch) => {
     dispatch(fetchDataRequest());
