@@ -265,7 +265,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              <CountUp  start={0} end={data.totalSupply} duration={2} /> / {CONFIG.MAX_SUPPLY}
+              <CountUp  start={0} end={data.totalSupply} duration={1} /> / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             
             <span
