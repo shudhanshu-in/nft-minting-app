@@ -34,6 +34,7 @@ export const CountApiCall = () => {
     await fetch("https://stripeapicounter.herokuapp.com/updateCount")
     .then(response => response.json())
     .then(data => {
+      console.log(data)
       dispatch(fetchDataTimer({time:data.count}))  
     })
     .catch(err => console.log(err))
