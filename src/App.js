@@ -119,6 +119,27 @@ function App() {
     MARKETPLACE_LINK: "",
     SHOW_BACKGROUND: false,
   });
+  
+  const [counter, setCounter] = useState(0);
+  
+  useEffect(() => {
+    setInterval(async () => {
+      const response = await fetch(
+        'https://counter-node-cron.herokuapp.com/counter',
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+        }
+      );
+      const data = await response.json();
+      //console.log(data);
+      if (data) {
+        setCounter(data.count);
+      }
+    }, 2000);
+  }, [data]);
 
   const claimNFTs = () => {
     let cost = CONFIG.WEI_COST;
@@ -231,18 +252,9 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              {data.totalSupply+1000} / {CONFIG.MAX_SUPPLY}
+              {counter === 0 ? 'Loading...' : `${counter} / 6800`}
             </s.TextTitle>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--primary-text)",
-              }}
-            >
-              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
-              </StyledLink>
-            </s.TextDescription>
+            
             <span
               style={{
                 textAlign: "center",
@@ -252,7 +264,7 @@ function App() {
               
             </span>
             <s.SpacerSmall />
-            {Number(data.totalSupply+1000) >= CONFIG.MAX_SUPPLY ? (
+            {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
