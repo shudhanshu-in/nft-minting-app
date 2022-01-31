@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
-import { fetchData } from "./redux/data/dataActions";
+import { fetchData, CountApiCall } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
+import CountUp from 'react-countup';
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -101,6 +102,7 @@ function App() {
   const [claimingNft, setClaimingNft] = useState(false);
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
+  const [defaultCount, setDefaultCount] = useState(data.totalSupply)
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -214,6 +216,17 @@ function App() {
   useEffect(() => {
     getData();
   }, [blockchain.account]);
+  
+  const updateTimer = () => {
+    setTimeout(() => {
+      setDefaultCount(defaultCount + 1)
+    }, 6000)
+  }
+  
+  useEffect(() => {
+    updateTimer()
+    dispatch(CountApiCall())
+  }, [defaultCount]);
 
   return (
     <s.Screen>
@@ -252,7 +265,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              {counter === 0 ? 'Loading...' : `${counter} / 6800`}
+              <CountUp  start={0} end={data.totalSupply} duration={2} /> / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             
             <span
