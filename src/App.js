@@ -240,7 +240,7 @@ function App() {
           <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         </a>
         <s.TextTitle
-                  style={{ textAlign: "center", color: "Black" fontSize: 80, fontWeight: "bold",}}
+                  style={{ textAlign: "center", color: "Black" , fontSize: 80, fontWeight: "bold",}}
                 >
                   Public Mint is LIVE
                 </s.TextTitle>
