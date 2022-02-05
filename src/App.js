@@ -249,6 +249,8 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
+              height: 200,
+              width: 400,
               backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
