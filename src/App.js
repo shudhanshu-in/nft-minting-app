@@ -414,10 +414,7 @@ function App() {
               </>
             )}
             <s.SpacerMedium />
-          
-        
-            
-          </s.TextDescription>
+
           <s.SpacerSmall />
           <s.TextDescription
             style={{
