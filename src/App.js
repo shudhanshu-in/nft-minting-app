@@ -239,11 +239,7 @@ function App() {
         <a href={CONFIG.MARKETPLACE_LINK}>
           <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         </a>
-        <s.TextTitle
-                  style={{ textAlign: "center", color: "Black" , fontSize: 58, fontWeight: "bold",}}
-                >
-                  Public Mint is LIVE
-                </s.TextTitle>
+
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
 
