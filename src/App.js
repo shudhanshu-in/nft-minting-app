@@ -413,8 +413,39 @@ function App() {
                 )}
               </>
             )}
-            
+            <s.SpacerMedium />
+          </s.Container>
+          <s.SpacerLarge />
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <StyledImg
+              alt={"example"}
+              src={"/config/images/example.gif"}
+              style={{ transform: "scaleX(-1)" }}
+            />
+          </s.Container>
+        </ResponsiveWrapper>
+        <s.SpacerMedium />
+        <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
+          <s.TextDescription
+            style={{
+              textAlign: "center",
+              color: "var(--primary-text)",
+            }}
+          >
 
+          </s.TextDescription>
+          <s.SpacerSmall />
+          <s.TextDescription
+            style={{
+              textAlign: "center",
+              color: "var(--primary-text)",
+            }}
+          >
+
+          </s.TextDescription>
+        </s.Container>
+      </s.Container>
+    </s.Screen>
   );
 }
 
