@@ -60,7 +60,7 @@ export const ResponsiveWrapper = styled.div`
   flex-direction: column;
   justify-content: stretched;
   align-items: stretched;
-  width: 100%;
+  width: 60%;
   @media (min-width: 767px) {
     flex-direction: row;
   }
@@ -249,8 +249,6 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
-              height: 200,
-              width: 400,
               backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
