@@ -433,7 +433,7 @@ function App() {
            
           </s.TextDescription>
         </s.Container>
-      </s.Container>
+
   );
 }
 
